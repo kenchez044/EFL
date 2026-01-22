@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>E-Football League Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+<h1>⚽ E-Football League</h1>
+
+<!-- ADD MATCH FORM -->
+<div class="form">
+    <h2>Add Match Result</h2>
+
+    <input type="text" id="teamA" placeholder="Team A">
+    <input type="number" id="scoreA" placeholder="Score A">
+
+    <span>VS</span>
+
+    <input type="number" id="scoreB" placeholder="Score B">
+    <input type="text" id="teamB" placeholder="Team B">
+
+    <button onclick="addMatch()">Add Match</button>
+</div>
+
+<!-- LEAGUE TABLE -->
+<table>
+    <thead>
+        <tr>
+            <th>Team</th>
+            <th>P</th>
+            <th>W</th>
+            <th>D</th>
+            <th>L</th>
+            <th>GF</th>
+            <th>GA</th>
+            <th>GD</th>
+            <th>PTS</th>
+        </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+</table>
+
+<script src="script.js"></script>
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js");
+}
+</script>
+
+</body>
+</html>
+
+
